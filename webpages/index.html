@@ -104,7 +104,7 @@
            Our mission is to make professional therapy accessible, affordable, and convenient - so anyone who struggles with life's challenges can get help anytime anywhere
           </p>
          
-          <a class="btn btn-style btn-outline-light mt-sm-5 mt-4 mr-2" href="about.html">
+          <a class="btn btn-style btn-outline-light mt-sm-5 mt-4 mr-2" href="{% url 'about' %}">
             Read More</a>
         </div>
        
@@ -216,101 +216,6 @@
   </section>
   <!-- //w3l-content-4-->
   
-  
-  <!--/Blog-Posts
-  <section class="w3l-blog py-5" id="blog">
-    <div class="container py-lg-5 py-md-4 py-2">
-      <div class="title-content text-center">
-        <h6 class="title-subhny text-center">Latest News</h6>
-        <h3 class="title-w3l pb-sm-o pb-2 text-center">Blog Posts</h3>
-      </div>
-      <div class="row inner-sec-w3ls">
-        
-        <div class="col-lg-4 col-md-6 about-in blog-grid-info text-left mt-5">
-          <div class="card img">
-            <div class="card-body img">
-              <a href="blog-single.html" class="d-block">
-                <img src="assets/images/g7.jpg" alt="" class="img-fluid radius-image">
-              </a>
-              <div class="blog-des mt-4">
-                <h6 class="card-cap mb-2"><a href="blog-single.html">Investigations</a></h6>
-                <h5 class="card-title mb-2"><a href="blog-single.html">The Right Choice For Your Health Care Needs.</a>
-                </h5>
-                <ul class="admin-post mb-3">
-                  <li>
-                    <span class="fa fa-user-o"></span><a href="#admin"> by Admin</a>
-                  </li>
-                  <li>
-                    <p><span class="fa fa-clock-o"></span> Jan 22,2021</p>
-                  </li>
-                  <li>
-                    <a href="#comments"><span class="fa fa-comments-o"></span> 3</a>
-                  </li>
-                </ul>
-
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 about-in blog-grid-info text-left mt-5">
-          <div class="card img">
-            <div class="card-body img">
-              <a href="blog-single.html" class="d-block">
-                <img src="assets/images/g5.jpg" alt="" class="img-fluid radius-image">
-              </a>
-              <div class="blog-des mt-4">
-                <h6 class="card-cap mb-2"><a href="blog-single.html">Researches</a></h6>
-                <h5 class="card-title mb-2"><a href="blog-single.html">The Right Choice For Your Health Care Needs.</a>
-                </h5>
-                <ul class="admin-post mb-3">
-                  <li>
-                    <span class="fa fa-user-o"></span><a href="#admin"> by Admin</a>
-                  </li>
-                  <li>
-                    <p><span class="fa fa-clock-o"></span> Jan 24,2021</p>
-                  </li>
-                  <li>
-                    <a href="#comments"><span class="fa fa-comments-o"></span> 3</a>
-                  </li>
-                </ul>
-
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 about-in blog-grid-info text-left mt-5">
-          <div class="card img">
-            <div class="card-body img">
-              <a href="blog-single.html" class="d-block">
-                <img src="assets/images/g3.jpg" alt="" class="img-fluid radius-image">
-              </a>
-              <div class="blog-des mt-4">
-                <h6 class="card-cap mb-2"><a href="blog-single.html">Your Health </a></h6>
-                <h5 class="card-title mb-2"><a href="blog-single.html">The Right Choice For Your Health Care Needs.</a>
-                </h5>
-                <ul class="admin-post mb-3">
-                  <li>
-                    <span class="fa fa-user-o"></span><a href="#admin"> by Admin</a>
-                  </li>
-                  <li>
-                    <p><span class="fa fa-clock-o"></span> Jan 28,2021</p>
-                  </li>
-                  <li>
-                    <a href="#comments"><span class="fa fa-comments-o"></span> 3</a>
-                  </li>
-                </ul>
-
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    </div>
-  </section>-->
-  <!-- /w3l-content-3-->
-
-  
   <section class="w3l-content-3 py-5">
     <!-- /content-6-section -->
     <div class="content-3-info py-3">
@@ -324,7 +229,7 @@
               In addition to our counseling services, we offer educational resources workshops and support groups to help you build resilience, improve
             communication skills and develop healthy relationships. we also provide referrals to support services if required</p>
             
-            <a class="btn btn-style btn-outline-light mt-sm-5 mt-4 mr-2" href="#">
+            <a class="btn btn-style btn-outline-light mt-sm-5 mt-4 mr-2" href="{% url 'contact' %}">
               Contact Us</a>
           </div>
           <div class="col-lg-6 free-appointment pl-lg-5 mt-5">
@@ -366,13 +271,11 @@
 
                       <select id="department" required="Specialization">
                         <option value="">Specialization*</option>
-                        <option value="">Cardiology</option>
-                        <option value="">Heart Surgery</option>
-                        <option value="">Skin Care</option>
-                        <option value="">Body Check-up</option>
-                        <option value="">Numerology</option>
-                        <option value="">Diagnosis</option>
-                        <option value="">Others</option>
+                        <option value="">Kids and Teenagers</option>
+                        <option value="">Youths/Young Adult</option>
+                        <option value="">Couple</option>
+                        <option value="">Adults</option>
+                        <option value="">Elders</option>
                       </select>
                     </div>
                   </div>
@@ -412,23 +315,23 @@
       <div class="row stats-con">
         <div class="col-lg-3 col-6 stats_info counter_grid">
           <span class="fa fa-users"></span>
-          <p class="counter">1100</p>
-          <h4>Expert counsellors</h4>
+          <p class="counter" style="color: #ffff;">1100</p>
+          <h4 style="color: #ffff;">Expert counsellors</h4>
         </div>
         <div class="col-lg-3 col-6 stats_info counter_grid1">
           <span class="fa fa-laptop"></span>
-          <p class="counter">1020</p>
-          <h4>Health Programs</h4>
+          <p class="counter" style="color: #ffff;">1020</p>
+          <h4 style="color: #ffff;">Health Programs</h4>
         </div>
         <div class="col-lg-3 col-6 stats_info counter_grid mt-lg-0 mt-5">
           <span class="fa fa-smile-o"></span>
-          <p class="counter">912</p>
-          <h4>Happy Clients</h4>
+          <p class="counter" style="color: #ffff;">912</p>
+          <h4 style="color: #ffff;">Happy Clients</h4>
         </div>
         <div class="col-lg-3 col-6 stats_info counter_grid2 mt-lg-0 mt-5">
           <span class="fa fa-trophy"></span>
-          <p class="counter">80</p>
-          <h4>Success Meets</h4>
+          <p class="counter" style="color: #ffff;">80</p>
+          <h4 style="color: #ffff;">Success Meets</h4>
         </div>
       </div>
     </div>
@@ -484,82 +387,6 @@
                     alt="placeholder image"></a>
                 <div class="people-info align-self">
                   <h3>Alexander sakura</h3>
-                  <p class="identity">Example City</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <div class="testimonial-content">
-              <div class="testimonial">
-                <blockquote>
-                  <q>Pellen tesque libero ut justo</q>
-                </blockquote>
-                <p>Lorem ipsum dolor sit amet elit. hic odio tenetur. ante ipsum primis in
-                  faucibus orci luctus.Vivamus a ligula quam tesque et libero ut justo, ultrices in. </p>
-              </div>
-              <div class="bottom-info mt-4">
-                <a class="comment-img" href="#url"><img src="assets/images/team3.jpg" class="img-responsive"
-                    alt="placeholder image"></a>
-                <div class="people-info align-self">
-                  <h3>John wilson</h3>
-                  <p class="identity">Example City</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <div class="testimonial-content">
-              <div class="testimonial">
-                <blockquote>
-                  <q>Lorem ipsum dolor sit amet</q>
-                </blockquote>
-                <p>Lorem ipsum dolor sit amet elit. hic odio tenetur. ante ipsum primis in
-                  faucibus orci luctus.Vivamus a ligula quam tesque et libero ut justo, ultrices in. </p>
-              </div>
-              <div class="bottom-info mt-4">
-                <a class="comment-img" href="#url"><img src="assets/images/team2.jpg" class="img-responsive"
-                    alt="placeholder image"></a>
-                <div class="people-info align-self">
-                  <h3>Julia sakura</h3>
-                  <p class="identity">Example City</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <div class="testimonial-content">
-              <div class="testimonial">
-                <blockquote>
-                  <q>Pellen tesque libero ut justo</q>
-                </blockquote>
-                <p>Lorem ipsum dolor sit amet elit. hic odio tenetur. ante ipsum primis in
-                  faucibus orci luctus.Vivamus a ligula quam tesque et libero ut justo, ultrices in. </p>
-              </div>
-              <div class="bottom-info mt-4">
-                <a class="comment-img" href="#url"><img src="assets/images/team3.jpg" class="img-responsive"
-                    alt="placeholder image"></a>
-                <div class="people-info align-self">
-                  <h3>John wilson</h3>
-                  <p class="identity">Example City</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <div class="testimonial-content">
-              <div class="testimonial">
-                <blockquote>
-                  <q>Lorem ipsum dolor sit amet.</q>
-                </blockquote>
-                <p>Lorem ipsum dolor sit amet elit. hic odio tenetur. ante ipsum primis in
-                  faucibus orci luctus.Vivamus a ligula quam tesque et libero ut justo, ultrices in. </p>
-              </div>
-              <div class="bottom-info mt-4">
-                <a class="comment-img" href="#url"><img src="assets/images/team2.jpg" class="img-responsive"
-                    alt="placeholder image"></a>
-                <div class="people-info align-self">
-                  <h3>Julia sakura</h3>
                   <p class="identity">Example City</p>
                 </div>
               </div>
