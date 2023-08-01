@@ -188,7 +188,7 @@
               </div>
               <div class="col-lg-3 col-6 stats_info counter_grid1">
                 <span class="fa fa-child"></span>
-                <p><a href="/areas/children.html">Children</a></p>
+                <p><a href="{% url 'children' %}">Children</a></p>
                 <h4></h4>
               </div>
               <div class="col-lg-3 col-6 stats_info counter_grid mt-lg-0 mt-5">
@@ -284,7 +284,7 @@
                     <div class="appointment-form-field">
 
                       <select id="doctor" required="Select Doctor">
-                        <option value="">Select Doctor</option>
+                        <option value="">Select counsellor</option>
                         <option value="">Doctor 1</option>
                         <option value="">Doctor 2</option>
                         <option value="">Doctor 3</option>
@@ -342,56 +342,30 @@
     <div class="midd-w3 py-5">
       <div class="container py-lg-5 py-md-4 pt-2 pb-lg-5">
         <div class="title-content text-center">
-          <h6 class="title-subhny text-center">Happy Clients</h6>
-          <h3 class="title-w3l mb-sm-5 mb-4 pb-sm-o pb-2 text-center">A Success Strory</h3>
+          <h6 class="title-subhny text-center"> Testimonies</h6>
+          <h3 class="title-w3l mb-sm-5 mb-4 pb-sm-o pb-2 text-center">A Success Story</h3>
         </div>
         <div id="owl-demo2" class="owl-carousel owl-theme mt-4 py-md-2 mb-md-4">
-          <div class="item">
-            <div class="testimonial-content">
-              <div class="testimonial">
-                <blockquote>
-                  <q></q>
-                </blockquote>
-                <p>Hello! my name is confidence O. i am a young teenager who once wallowed in the depth of masturbation. it was so chronic to the extent that, any chance ive got to be alone i masturbate. infact!
-                  it was so worse that a week wouldnt pass without masturbating countless times.
-                 </p>
-                 <p>
-                  On a FATEFUL DAY, something around 2021, i got the ticket to gaining my freedom. i met 
-                  with one of this counselling team in RCCG(Rredeemed christian church of God)
-                    he was a tool that God used to shape my entire life, Todya i have become a new creature, a guitless being, who has gained her freedorder
-                    and  can now fly freely without limitations. i now have a thriving ministry
-                    which God has been using to change lives in my sphere of influence. Hellujah!!! 
-                 </p>
-              </div>
-              <div class="bottom-info mt-4">
-                <a class="comment-img" href="#url"><img src="{% static 'assets/images/team1.jpg' %}" class="img-responsive"
-                    alt="placeholder image"></a>
-                <div class="people-info align-self">
-                  <h3>Confidence o.</h3>
-                  <p class="identity">Nigeria</p>
+          {% for testimony in testimonies %}
+            <div class="item">
+              <div class="testimonial-content">
+                <div class="testimonial">
+                  <blockquote>
+                    <q>{{testimony.title}}</q>
+                  </blockquote>
+                  <p>{{testimony.testimony}} </p>
+                </div>
+                <div class="bottom-info mt-4">
+                  <a class="comment-img" href="#url"><img src="{{testimony.image.url}}" class="img-responsive"
+                      alt="placeholder image"></a>
+                  <div class="people-info align-self">
+                    <h3>{{testimony.name}}</h3>
+                    <p class="identity">{{testimony.location}}</p>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="item">
-            <div class="testimonial-content">
-              <div class="testimonial">
-                <blockquote>
-                  <q>Lorem ipsum dolor sit amet</q>
-                </blockquote>
-                <p>Lorem ipsum dolor sit amet elit. hic odio tenetur. ante ipsum primis in
-                  faucibus orci luctus.Vivamus a ligula quam tesque et libero ut justo, ultrices in. </p>
-              </div>
-              <div class="bottom-info mt-4">
-                <a class="comment-img" href="#url"><img src="{% static 'assets/images/team2.jpg' %}" class="img-responsive"
-                    alt="placeholder image"></a>
-                <div class="people-info align-self">
-                  <h3>Alexander sakura</h3>
-                  <p class="identity">Example City</p>
-                </div>
-              </div>
-            </div>
-          </div>
+          {% endfor %}
         </div>
       </div>
     </div>

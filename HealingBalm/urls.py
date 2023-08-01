@@ -22,7 +22,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
-    # path('favicon.ico', lambda _ : redirect('static/assets/img/favicon.ico', permanent=True)),
+    path('favicon.ico', lambda _ : redirect('static/assets/images/favicon.ico', permanent=True)),
     path('admin/', admin.site.urls),
     path('', include("web.urls")),
     
