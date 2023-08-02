@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # install app(s)
     'web', 
+    "authentication",
 ]
 
 MIDDLEWARE = [

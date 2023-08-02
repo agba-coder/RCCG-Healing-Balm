@@ -41,7 +41,7 @@ class Mail(models.Model):
     email = models.EmailField()
     subject = models.CharField(max_length=50)
     message = models.TextField()
-    date_sent = models.DateTimeField(auto_created=True)
+    date_sent = models.DateTimeField(auto_now_add=True)
     
     def __str__(self) -> str:
         return f"{self.name} left a message for you"
