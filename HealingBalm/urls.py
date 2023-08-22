@@ -25,7 +25,7 @@ urlpatterns = [
     path('favicon.ico', lambda _ : redirect('static/assets/images/favicon.ico', permanent=True)),
     path('admin/', admin.site.urls),
     path('', include("web.urls")),
-    path('authentication/', include("authentication.urls")),
+    path('accounts/auth/', include("authentication.urls")),
     
 ] 
 

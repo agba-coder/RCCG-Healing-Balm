@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Create An Account {% endblock title %}
+
+
+{% block content %}
+   <!--/breadcrumb-bg-->
+   <div class="breadcrumb-bg py-5  w3l-inner-page-breadcrumb">
+    <div class="container pt-lg-5 pt-md-3 p-lg-4 pb-md-3 my-lg-3">
+      <h2 class="title pt-5">Create An Account </h2>
+      <ul class="breadcrumbs-custom-path mt-3 text-center">
+        <li><a href="/">Home</a></li>
+        <li class="active"><span class="fa fa-arrow-right mx-2" aria-hidden="true"></span> Register </li>
+      </ul>
+    </div>
+  </div>
+
+<!--//breadcrumb-bg-->
+<!-- banner bottom shape -->
+<div class="position-relative">
+  <div class="shape overflow-hidden">
+    <svg viewBox="0 0 2880 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 48H1437.5H2880V0H2160C1442.5 52 720 0 720 0H0V48Z" fill="currentColor"></path>
+    </svg>
+  </div>
+</div>
+<!-- banner bottom shape -->
+<!--/contact-->
+<section class="w3l-contact-2 py-5" id="contact">
+  <div class="container py-lg-5 py-md-4 py-2">
+    <div class="contact-grids d-grid">
+      <div class="contact-left">
+        <h6 class="title-subhny mb-1">Get Started</h6>
+        <h3 class="title-w3l mb-2"> Register Account</h3>
+        {% comment %} <p>We have a dedicated support center for all of your support needs. We usually get back to you within
+          12-24 hours.</p> {% endcomment %}
+          <img src='{% static 'assets/images/team3.jpg' %}' alt='' />
+        
+      </div>
+      <div class="contact-right">
+        <div class="container">
+          {% if messages %}
+              {% for message in messages %}
+              <div class="alert alert-{{ message.tags }}" role="alert">
+                <h4 class="alert-heading">Authentication Alert! 🙁</h4>
+                <p>{{message}}.</p>
+                <hr>
+                <p class="mb-0"><strong>RCCG Healing Balm Team.</strongbhz></p>
+              </div>
+              {% endfor %}
+          {% endif %}
+        </div>
+        <form action="{% url 'register' %}" method="post" class="signin-form">
+          {% csrf_token %}
+          <div class="input-grids">
+            <input type="text" name="fname" id="w3lName" placeholder="First Name*" class="contact-input"
+              required="" />
+            <input type="text" name="lname" id="w3lName" placeholder="Last Name*" class="contact-input"
+              required="" />
+            <input type="email" name="email" id="w3lSender" placeholder="Email Address*" class="contact-input"
+              required="" />
+            <input type="text" name="username" id="w3lSender" placeholder="Username*" class="contact-input"
+            required="" />
+            <input type="password" name="password" id="w3lSender" placeholder="Password*" class="contact-input"
+              required="" />
+            <input type="password" name="cpassword" id="w3lSender" placeholder="Confirm Password*" class="contact-input"
+              required="" />
+          </div>
+          <p style="color: #008000; text-align: right; font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+          font-size: 20px;"><a href="{% url 'login' %}"><strong>Already have an Account?</strong><a/></p>
+          <br/>
+          <div class="w3l-submit text-lg-center"> 
+          <center><button class="btn btn-style btn-primary">Create Account &rarr;</button></center>
+          </div>
+        </form>
+      </div>
+    </div>
+</section>
+
+{% endblock content %}

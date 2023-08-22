@@ -51,6 +51,21 @@ class Mail(models.Model):
         verbose_name = 'Mail'
         verbose_name_plural = 'Mails'
         ordering = ("-date_sent",)
+        
+class PrayerRequest(models.Model):
+    name = models.CharField(max_length=30)
+    email = models.EmailField()
+    prayer_for = models.CharField(max_length=20)
+    message = models.TextField()
+    date_sent = models.DateTimeField(auto_now_add=True)
+    
+    def __str__(self):
+        return f"{self.name}'s Prayer Request"
+    
+    class Meta:
+        verbose_name = "Prayer Request"
+        verbose_name_plural = "Prayer Requests"
+        ordering = ()
     
 
         
